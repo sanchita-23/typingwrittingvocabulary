@@ -13,12 +13,12 @@ To develop an educational game designed to enhance typing speed, writing profici
 <br>System Design and Architecture
 <br>6.1 Overview
 <br>6.2 Diagrams
-<br>Data Design
 <br>User Interface Design
 <br>Testing Plan
 <br>Monitoring Plan
 <br>Glossary
 <br>References
+
 **<h3>Introduction</h3>**
 
 **<h5>1.1 Objective</h5>**
@@ -166,4 +166,107 @@ Progress tracking graphs for typing speed and vocabulary mastery.<br>
 <h5>Reliability:</h5> Ensure 99.9% uptime.
 <h5>Scalability:</h5> Support dynamic addition of new challenges and words.
 <h5>Security:</h5> Data encryption and user authentication.
+
+**<h3>Technical Requirements</h3>**
+
+**Technology Stack**
+•	<h5>Programming Language(s):</h5>
+
+o	Java: For building the desktop version with JavaFX to manage UI and game logic.<br>
+
+o	JavaScript/HTML5 (for a web-based version): If developed for browsers, JavaScript would be used alongside HTML5/CSS.
+•	<h5>Frameworks:</h5>
+
+o	JavaFX: To handle the UI and game flow for the desktop version.<br>
+
+o	React or Vue.js (for a web-based version): If building a web version, React or Vue.js could be used for creating dynamic and interactive web pages.
+•	<h5>Tools:</h5>
+
+o	Git: For version control.<br>
+
+o	Maven: For managing dependencies in the Java-based project.<br>
+
+o	ESLint/Prettier: For ensuring code quality (if using JavaScript for the web version).
+•	<h5>Libraries:</h5>
+
+o	JUnit: For unit testing, particularly to ensure that typing mechanics and the scoring system function correctly.<br>
+
+o	SQLite: To store player statistics locally, such as their scores, WPM, accuracy, and vocabulary usage history.<br>
+
+
+**<h3>System Design and Architecture</h3>**
+
+**<h5>6.1 Overview</h5>**
+
+The application has three main layers:
+
+<h5>User Interface (UI):</h5> Displays game prompts and collects user input.<br>
+<h5>Logic Layer:</h5> Processes input, calculates scores, and generates feedback.<br>
+<h5>Database Layer:</h5> Stores user data, scores, and progress history.<br>
+
+**<h5>6.2 Diagrams</h5>**
+
+<h5>Component Diagram:</h5>
+
+
+| User Interface  |  <-->  | Logic Layer    | <-->  | Database Layer |
+              
+
+
+<h5>Data Flow Diagram:</h5>
+
+
+User Input -> Logic -> Score Calculation -> Feedback -> UI Update
+
+
+**<h3>User Interface Design</h3>**
+
+<h5>Navigation Flow</h5>
+
+Login/Sign-Up -> Dashboard -> Game Modes -> Results/Feedback.
+
+<h5>UI Features</h5>
+
+<h6>Typing Test Screen:</h6>
+Timer and real-time WPM display.<br>
+Text input field with dynamic prompts.<br>
+<h6>Writing Task Screen:</h6>
+Highlighted text for grammar corrections.<br>
+Drag-and-drop for sentence rearrangement.<br>
+<h6>Vocabulary Task Screen:</h6>
+Flashcards with spelling tasks.<br>
+Sentence prompts with word suggestions<br>
+
+**<h3>Testing Plan</h3>**
+
+**Testing Plan**
+
+<h6>Test Objectives</h6>
+Verify typing accuracy and speed calculations.<br>
+Validate grammar correction logic.<br>
+Test progress tracking and data persistence.<br>
+
+<h6>Sample Test Cases</h6>
+
+Test ID	:&nbsp;&nbsp;&nbsp;  Input	Expected Output <br>
+TC001	 :&nbsp;&nbsp;&nbsp;     Typing test paragraph	 :&nbsp;&nbsp;&nbsp;     WPM and accuracy calculated correctly<br>
+TC002    :&nbsp;&nbsp;&nbsp;  	Incorrect sentence input:&nbsp;&nbsp;&nbsp;	  Correct grammar displayed<br>
+TC003	    :&nbsp;&nbsp;&nbsp;  Misspelled word	  :&nbsp;&nbsp;&nbsp;         Feedback with correct spelling<br>
+
+**<h3>Monitoring Plan</h3>**
+**Key Metrics**
+<h5>Performance:</h5> Response time, server load.
+<h5>Engagement:</h5> Active users, average session time.
+<h5>Error Tracking:</h5> Input validation errors, crashes.
+
+
+**<h3>Glossary</h3>**
+<h5>WPM:</h5> Words Per Minute, a metric for typing speed.
+<h5>UI:</h5>User Interface.
+<h5>ERD:</h5> Entity Relationship Diagram.
+
+**<h3>References</h3>**
+Project specifications and design templates​​.<br>
+Best practices in gamified learning.<br>
+
 
