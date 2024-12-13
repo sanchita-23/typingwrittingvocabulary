@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Typing, Writing & Vocabulary Game</title>
+</head>
+<body>
+  <header>
+    <h1>Typing, Writing & Vocabulary Game</h1>
+  </header>
+
+  <main>
+    <!-- Mode Selection -->
+    <section id="mode-selection">
+      <h2>Select Mode</h2>
+      <button class="mode-btn" data-mode="typing">Typing Speed Test</button>
+      <button class="mode-btn" data-mode="writing">Writing Proficiency Test</button>
+      <button class="mode-btn" data-mode="vocabulary">Vocabulary Challenge</button>
+    </section>
+
+    <!-- Typing Speed Test -->
+    <section id="typing-section" class="hidden">
+      <h2>Typing Speed Test</h2>
+      <div id="typing-test">
+        <p id="prompt">Press Start to Begin!</p>
+        <textarea id="user-input" placeholder="Start typing here..." disabled></textarea>
+        <button id="start-btn">Start Test</button>
+        <button id="next-btn" disabled>Next Sentence</button>
+        <p>WPM: <span id="wpm-value">0</span></p>
+        <p>Accuracy: <span id="accuracy-value">0</span>%</p>
+      </div>
+    </section>
+
+    <!-- Writing Proficiency Test -->
+    <section id="writing-section" class="hidden">
+      <h2>Writing Proficiency Test</h2>
+      <div id="challenge-container">
+        <p id="challenge-task">Press Start to Begin a Writing Challenge!</p>
+        <textarea id="challenge-input" placeholder="Type your response here..." disabled></textarea>
+        <button id="hint-btn" disabled>Show Hint</button>
+        <button id="solution-btn" disabled>Show Solution</button>
+        <p id="feedback"></p>
+      </div>
+    </section>
+
+    <!-- Vocabulary Challenge -->
+    <section id="vocabulary-section" class="hidden">
+      <h2>Vocabulary Challenge</h2>
+      <div id="vocabulary-container">
+        <p id="vocab-word">Press Start for a Vocabulary Challenge!</p>
+        <textarea id="vocab-input" placeholder="Type the word here..." disabled></textarea>
+        <p id="vocab-feedback"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
